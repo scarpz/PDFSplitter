@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		180E6B7C2295D63500B7302E /* Document.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 180E6B7B2295D63500B7302E /* Document.pdf */; };
 		180E6B7E2295DFA100B7302E /* PDFServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E6B7D2295DFA100B7302E /* PDFServices.swift */; };
+		18CF153A2297517500099ABE /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18CF15392297517500099ABE /* Media.xcassets */; };
+		18CF153C2297517500099ABE /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF153B2297517500099ABE /* ActionViewController.swift */; };
+		18CF153F2297517500099ABE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CF153D2297517500099ABE /* MainInterface.storyboard */; };
+		18CF15432297517500099ABE /* PDFSplitterExt.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 18CF15372297517500099ABE /* PDFSplitterExt.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2DA1C01222953EA30075BB86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1C01122953EA30075BB86 /* AppDelegate.swift */; };
 		2DA1C01422953EA30075BB86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1C01322953EA30075BB86 /* ViewController.swift */; };
 		2DA1C01722953EA30075BB86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA1C01522953EA30075BB86 /* Main.storyboard */; };
@@ -16,9 +20,38 @@
 		2DA1C01C22953EA30075BB86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA1C01A22953EA30075BB86 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		18CF15412297517500099ABE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DA1C00622953EA20075BB86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18CF15362297517500099ABE;
+			remoteInfo = PDFSplitterExt;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		18CF15472297517500099ABE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				18CF15432297517500099ABE /* PDFSplitterExt.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		180E6B7B2295D63500B7302E /* Document.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Document.pdf; sourceTree = "<group>"; };
 		180E6B7D2295DFA100B7302E /* PDFServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFServices.swift; sourceTree = "<group>"; };
+		18CF15372297517500099ABE /* PDFSplitterExt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PDFSplitterExt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		18CF15392297517500099ABE /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		18CF153B2297517500099ABE /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		18CF153E2297517500099ABE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		18CF15402297517500099ABE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DA1C00E22953EA30075BB86 /* PDFSplitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFSplitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DA1C01122953EA30075BB86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DA1C01322953EA30075BB86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +62,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		18CF15342297517500099ABE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2DA1C00B22953EA30075BB86 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -39,10 +79,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18CF15382297517500099ABE /* PDFSplitterExt */ = {
+			isa = PBXGroup;
+			children = (
+				18CF15392297517500099ABE /* Media.xcassets */,
+				18CF153B2297517500099ABE /* ActionViewController.swift */,
+				18CF153D2297517500099ABE /* MainInterface.storyboard */,
+				18CF15402297517500099ABE /* Info.plist */,
+			);
+			path = PDFSplitterExt;
+			sourceTree = "<group>";
+		};
 		2DA1C00522953EA20075BB86 = {
 			isa = PBXGroup;
 			children = (
 				2DA1C01022953EA30075BB86 /* PDFSplitter */,
+				18CF15382297517500099ABE /* PDFSplitterExt */,
 				2DA1C00F22953EA30075BB86 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				2DA1C00E22953EA30075BB86 /* PDFSplitter.app */,
+				18CF15372297517500099ABE /* PDFSplitterExt.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +126,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		18CF15362297517500099ABE /* PDFSplitterExt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18CF15462297517500099ABE /* Build configuration list for PBXNativeTarget "PDFSplitterExt" */;
+			buildPhases = (
+				18CF15332297517500099ABE /* Sources */,
+				18CF15342297517500099ABE /* Frameworks */,
+				18CF15352297517500099ABE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PDFSplitterExt;
+			productName = PDFSplitterExt;
+			productReference = 18CF15372297517500099ABE /* PDFSplitterExt.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		2DA1C00D22953EA30075BB86 /* PDFSplitter */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DA1C02022953EA30075BB86 /* Build configuration list for PBXNativeTarget "PDFSplitter" */;
@@ -80,10 +150,12 @@
 				2DA1C00A22953EA30075BB86 /* Sources */,
 				2DA1C00B22953EA30075BB86 /* Frameworks */,
 				2DA1C00C22953EA30075BB86 /* Resources */,
+				18CF15472297517500099ABE /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				18CF15422297517500099ABE /* PBXTargetDependency */,
 			);
 			name = PDFSplitter;
 			productName = PDFSplitter;
@@ -100,6 +172,9 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Felipe Scarpitta";
 				TargetAttributes = {
+					18CF15362297517500099ABE = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
 					2DA1C00D22953EA30075BB86 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -119,11 +194,21 @@
 			projectRoot = "";
 			targets = (
 				2DA1C00D22953EA30075BB86 /* PDFSplitter */,
+				18CF15362297517500099ABE /* PDFSplitterExt */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		18CF15352297517500099ABE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18CF153A2297517500099ABE /* Media.xcassets in Resources */,
+				18CF153F2297517500099ABE /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2DA1C00C22953EA30075BB86 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -138,6 +223,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		18CF15332297517500099ABE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18CF153C2297517500099ABE /* ActionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2DA1C00A22953EA30075BB86 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -150,7 +243,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		18CF15422297517500099ABE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18CF15362297517500099ABE /* PDFSplitterExt */;
+			targetProxy = 18CF15412297517500099ABE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		18CF153D2297517500099ABE /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18CF153E2297517500099ABE /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		2DA1C01522953EA30075BB86 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -170,6 +279,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		18CF15442297517500099ABE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7T8R3N4U6X;
+				INFOPLIST_FILE = PDFSplitterExt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.scarpz.PDFSplitter.PDFSplitterExt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18CF15452297517500099ABE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7T8R3N4U6X;
+				INFOPLIST_FILE = PDFSplitterExt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.scarpz.PDFSplitter.PDFSplitterExt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		2DA1C01E22953EA30075BB86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -289,6 +436,7 @@
 		2DA1C02122953EA30075BB86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7T8R3N4U6X;
@@ -308,6 +456,7 @@
 		2DA1C02222953EA30075BB86 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7T8R3N4U6X;
@@ -327,6 +476,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		18CF15462297517500099ABE /* Build configuration list for PBXNativeTarget "PDFSplitterExt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18CF15442297517500099ABE /* Debug */,
+				18CF15452297517500099ABE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2DA1C00922953EA20075BB86 /* Build configuration list for PBXProject "PDFSplitter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
