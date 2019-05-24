@@ -19,63 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="t3W-ce-fVk">
-                                <rect key="frame" x="30" y="138" width="354" height="425"/>
+                                <rect key="frame" x="30" y="138" width="354" height="45"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j87-7d-Hgx">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="45"/>
-                                        <color key="backgroundColor" red="0.0" green="0.78457856514084512" blue="0.75679467429577463" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="G2o-D3-VP0"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Load PDF">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="loadPDF:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7cV-2F-tWQ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBO-l5-Rah">
-                                        <rect key="frame" x="0.0" y="95" width="354" height="45"/>
-                                        <color key="backgroundColor" red="0.0" green="0.78457856510000001" blue="0.75679467430000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="TYt-OV-EOe"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Split PDF">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="splitPDF:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eY4-3l-ue3"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ev-uT-wlt">
-                                        <rect key="frame" x="0.0" y="190" width="354" height="45"/>
-                                        <color key="backgroundColor" red="0.0" green="0.78457856510000001" blue="0.75679467430000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="eED-55-cjp"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="PDF from range">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="createPDFFromRange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cr2-KF-TK0"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faU-1k-wIU">
-                                        <rect key="frame" x="0.0" y="285" width="354" height="45"/>
-                                        <color key="backgroundColor" red="0.0" green="0.78457856510000001" blue="0.75679467430000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="o2N-wX-4Vf"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="z">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXd-he-Oyq">
-                                        <rect key="frame" x="0.0" y="380" width="354" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="45"/>
                                         <color key="backgroundColor" red="0.0" green="0.78457856510000001" blue="0.75679467430000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="oks-bB-hIK"/>
@@ -84,6 +31,9 @@
                                         <state key="normal" title="z">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="cenas:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A52-ur-smD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
