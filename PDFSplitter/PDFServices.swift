@@ -51,5 +51,4 @@ class PDFServices {
             pdf.documentAttributes!["Title"] = title
         }
     }
-    
 }
