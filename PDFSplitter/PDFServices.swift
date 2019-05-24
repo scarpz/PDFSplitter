@@ -32,6 +32,17 @@ class PDFServices {
         return pdf
     }
     
+    static func combine(pdfs: [PDFDocument]) -> PDFDocument {
+        let finalPDF = PDFDocument()
+        
+        for pdf in pdfs {
+            for page in PDFServices.splitPages(from: pdf) {
+                finalPDF.insert(page, at: finalPDF.pageCount)
+            }
+        }
+        return finalPDF
+    }
+    
     static func createNewPDF(from pdf: PDFDocument, firstPage: Int, lastPage: Int) -> PDFDocument {
         let newPDF = PDFDocument()
         newPDF.documentAttributes = pdf.documentAttributes
@@ -44,7 +55,6 @@ class PDFServices {
     }
     
     static func change(pdfTitle title: String, for pdf: PDFDocument) throws {
-        
         let temporaryFolder = FileManager.default.temporaryDirectory
         let fileName = "\(title).pdf"
         let temporaryFileURL = temporaryFolder.appendingPathComponent(fileName)
