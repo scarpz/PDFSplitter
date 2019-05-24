@@ -12,11 +12,34 @@ import PDFKit
 
 class ActionViewController: UIViewController {
     
+    // MARK: - Outlets
+    
+    // MARK: - Properties
+    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let fileItem = self.extensionContext!.inputItems.first as! NSExtensionItem
-        let itemProvider = fileItem.attachments!.first!
+        self.loadIncomingPDF()
+    }
+    
+    // MARK: - Actions
+    @IBAction func done() {
+        // Return any edited content to the host app.
+        // This template doesn't do anything, so we just echo the passed in items.
+        self.extensionContext!.completeRequest(returningItems: self.extensionContext!.inputItems, completionHandler: nil)
+    }
+}
+
+// MARK: - Private Methods
+extension ActionViewController {
+    
+    private func loadIncomingPDF() {
+        
+        guard let context = self.extensionContext else { return }
+        guard let fileItem = context.inputItems.first as? NSExtensionItem else { return }
+        guard let itemProvider = fileItem.attachments?.first else { return }
+        
         let identifier = kUTTypePDF as String
         
         if itemProvider.hasItemConformingToTypeIdentifier(identifier) {
@@ -25,16 +48,9 @@ class ActionViewController: UIViewController {
                 
                 if let pdfURL = pdfURL as? URL {
                     let pdf = PDFDocument(url: pdfURL)
-                    print(pdf)
                 }
             }
         }
+        
     }
-    
-    @IBAction func done() {
-        // Return any edited content to the host app.
-        // This template doesn't do anything, so we just echo the passed in items.
-        self.extensionContext!.completeRequest(returningItems: self.extensionContext!.inputItems, completionHandler: nil)
-    }
-
 }

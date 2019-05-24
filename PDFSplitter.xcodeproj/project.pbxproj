@@ -18,6 +18,7 @@
 		2DA1C01722953EA30075BB86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA1C01522953EA30075BB86 /* Main.storyboard */; };
 		2DA1C01922953EA30075BB86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DA1C01822953EA30075BB86 /* Assets.xcassets */; };
 		2DA1C01C22953EA30075BB86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA1C01A22953EA30075BB86 /* LaunchScreen.storyboard */; };
+		2DAEFA3122980C6700BE9377 /* PDFServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E6B7D2295DFA100B7302E /* PDFServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DAEFA3122980C6700BE9377 /* PDFServices.swift in Sources */,
 				18CF153C2297517500099ABE /* ActionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

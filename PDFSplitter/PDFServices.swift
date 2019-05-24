@@ -10,14 +10,6 @@ import PDFKit
 
 class PDFServices {
     
-    static func loadPDF(from url: URL) -> PDFDocument? {
-        if let pdf = PDFDocument(url: url) {
-            return pdf
-        } else {
-            return nil
-        }
-    }
-    
     static func splitPages(from pdf: PDFDocument) -> [PDFPage] {
         var allPages = [PDFPage]()
         for index in 0..<pdf.pageCount {
@@ -42,6 +34,7 @@ class PDFServices {
     
     static func createNewPDF(from pdf: PDFDocument, firstPage: Int, lastPage: Int) -> PDFDocument {
         let newPDF = PDFDocument()
+        newPDF.documentAttributes = pdf.documentAttributes
         for index in firstPage...lastPage {
             if let page = pdf.page(at: index) {
                 newPDF.insert(page, at: newPDF.pageCount)
@@ -50,7 +43,7 @@ class PDFServices {
         return newPDF
     }
     
-    static func changePDFTitle(pdf: PDFDocument, title: String) {
+    static func change(pdfTitle title: String, for pdf: PDFDocument) {
         if var attributes = pdf.documentAttributes {
             attributes["Title"] = title
         } else {
