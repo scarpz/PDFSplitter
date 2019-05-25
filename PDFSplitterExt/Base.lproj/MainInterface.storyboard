@@ -27,6 +27,11 @@
                                                 <action selector="done" destination="ObA-dk-sSI" id="Qdu-qn-U6V"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="RcI-QO-qFt">
+                                            <connections>
+                                                <action selector="pdfSplitter:" destination="ObA-dk-sSI" id="8Lm-Mi-e1f"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
