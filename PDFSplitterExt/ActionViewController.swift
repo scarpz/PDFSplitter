@@ -91,8 +91,8 @@ extension ActionViewController {
             self.createPageRangePDFAlert()
         }))
         outterAlert.addAction(UIAlertAction(title: "Change PDF filename", style: .default, handler: { _ in
-            PDFServices.change(pdfTitle: "Tchenefleners", for: self.pdf)
-            self.shareAlert(content: [self.pdf.dataRepresentation()!])
+            let newPDF = PDFServices.change(pdfTitle: "Tchenefleners", for: self.pdf)
+            self.shareAlert(content: [newPDF.dataRepresentation()!])
         }))
         outterAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         self.present(outterAlert, animated: true, completion: nil)

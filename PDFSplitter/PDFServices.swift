@@ -52,31 +52,18 @@ class PDFServices {
         return newPDF
     }
     
-    static func change(pdfTitle title: String, for pdf: PDFDocument) {
+    static func change(pdfTitle title: String, for pdf: PDFDocument) -> PDFDocument {
+        
+        let filePath = FileManager.default.temporaryDirectory.appendingPathComponent("\(title).pdf")
+        
+        let newPDF = PDFDocument(url: filePath)!
         
         if var newAttributes = pdf.documentAttributes {
             newAttributes["Title"] = title
-            pdf.setValue(newAttributes, forKey: "documentAttributes")
+            newPDF.setValue(newAttributes, forKey: "documentAttributes")
         }
+        newPDF.write(to: filePath)
         
-        
-//        let temporaryFolder = FileManager.default.temporaryDirectory
-//        let fileName = "\(title).pdf"
-//        let temporaryFileURL = temporaryFolder.appendingPathComponent(fileName)
-//
-//        do {
-//            let pdfData = pdf.dataRepresentation()!
-//
-//            try pdfData.write(to: temporaryFileURL)
-//
-//            if var attributes = pdf.documentAttributes {
-//                attributes["Title"] = title
-//            } else {
-//                pdf.documentAttributes = [AnyHashable : Any]()
-//                pdf.documentAttributes!["Title"] = title
-//            }
-//        } catch let error {
-//            print(error)
-//        }
+        return newPDF
     }
 }
