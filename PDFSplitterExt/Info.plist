@@ -21,22 +21,32 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>NSExtension</key>
-	<dict>
-		<key>NSExtensionAttributes</key>
-		<dict>
-			<key>NSExtensionActivationRule</key>
-			<string>TRUEPREDICATE</string>
-			<key>NSExtensionServiceAllowsFinderPreviewItem</key>
-			<true/>
-			<key>NSExtensionServiceAllowsTouchBarItem</key>
-			<true/>
-			<key>NSExtensionServiceFinderPreviewIconName</key>
-			<string>NSActionTemplate</string>
-			<key>NSExtensionServiceTouchBarBezelColorName</key>
-			<string>TouchBarBezel</string>
-			<key>NSExtensionServiceTouchBarIconName</key>
-			<string>NSActionTemplate</string>
-		</dict>
+    <dict>
+        <key>NSExtensionAttributes</key>
+        <dict>
+            <key>NSExtensionActivationRule</key>
+            <string>
+                SUBQUERY (
+                    extensionItems,
+                    $extensionItem,
+                    SUBQUERY (
+                        $extensionItem.attachments,
+                        $attachment,
+                        ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "com.adobe.pdf"
+                    ).@count == $extensionItem.attachments.@count
+                ).@count == 1
+            </string>
+            <key>NSExtensionServiceAllowsFinderPreviewItem</key>
+            <true/>
+            <key>NSExtensionServiceAllowsTouchBarItem</key>
+            <true/>
+            <key>NSExtensionServiceFinderPreviewIconName</key>
+            <string>NSActionTemplate</string>
+            <key>NSExtensionServiceTouchBarBezelColorName</key>
+            <string>TouchBarBezel</string>
+            <key>NSExtensionServiceTouchBarIconName</key>
+            <string>NSActionTemplate</string>
+        </dict>
 		<key>NSExtensionMainStoryboard</key>
 		<string>MainInterface</string>
 		<key>NSExtensionPointIdentifier</key>

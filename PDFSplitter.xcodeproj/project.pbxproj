@@ -53,6 +53,8 @@
 		18CF153B2297517500099ABE /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		18CF153E2297517500099ABE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		18CF15402297517500099ABE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18FC176622995E4F008C6374 /* PDFSplitter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PDFSplitter.entitlements; sourceTree = "<group>"; };
+		18FC176722995E67008C6374 /* PDFSplitterExt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PDFSplitterExt.entitlements; sourceTree = "<group>"; };
 		2DA1C00E22953EA30075BB86 /* PDFSplitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFSplitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DA1C01122953EA30075BB86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DA1C01322953EA30075BB86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		18CF15382297517500099ABE /* PDFSplitterExt */ = {
 			isa = PBXGroup;
 			children = (
+				18FC176722995E67008C6374 /* PDFSplitterExt.entitlements */,
 				18CF15392297517500099ABE /* Media.xcassets */,
 				18CF153B2297517500099ABE /* ActionViewController.swift */,
 				18CF153D2297517500099ABE /* MainInterface.storyboard */,
@@ -112,6 +115,7 @@
 		2DA1C01022953EA30075BB86 /* PDFSplitter */ = {
 			isa = PBXGroup;
 			children = (
+				18FC176622995E4F008C6374 /* PDFSplitter.entitlements */,
 				180E6B7B2295D63500B7302E /* Document.pdf */,
 				2DA1C01122953EA30075BB86 /* AppDelegate.swift */,
 				2DA1C01322953EA30075BB86 /* ViewController.swift */,
@@ -175,9 +179,19 @@
 				TargetAttributes = {
 					18CF15362297517500099ABE = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					2DA1C00D22953EA30075BB86 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};

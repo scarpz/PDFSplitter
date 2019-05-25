@@ -13,6 +13,7 @@ import PDFKit
 class ActionViewController: UIViewController {
     
     // MARK: - Outlets
+    @IBOutlet private weak var pdfView: PDFView!
     
     // MARK: - Properties
     
@@ -47,10 +48,22 @@ extension ActionViewController {
             itemProvider.loadItem(forTypeIdentifier: identifier, options: nil) { pdfURL, error in
                 
                 if let pdfURL = pdfURL as? URL {
-                    let pdf = PDFDocument(url: pdfURL)
+                    guard let pdf = PDFDocument(url: pdfURL) else { return }
+                    DispatchQueue.main.async {
+                        self.display(pdf: pdf)
+                    }
                 }
             }
+        } else {
+            self.done()
         }
         
+    }
+    
+    private func display(pdf: PDFDocument) {
+        self.pdfView.displayMode = .singlePageContinuous
+        self.pdfView.autoScales = true
+        self.pdfView.displayDirection = .vertical
+        self.pdfView.document = pdf
     }
 }
