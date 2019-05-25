@@ -52,24 +52,31 @@ class PDFServices {
         return newPDF
     }
     
-    static func change(pdfTitle title: String, for pdf: PDFDocument) throws {
-        let temporaryFolder = FileManager.default.temporaryDirectory
-        let fileName = "\(title).pdf"
-        let temporaryFileURL = temporaryFolder.appendingPathComponent(fileName)
-
-        do {
-            let pdfData = pdf.dataRepresentation()!
-            
-            try pdfData.write(to: temporaryFileURL)
-            
-            if var attributes = pdf.documentAttributes {
-                attributes["Title"] = title
-            } else {
-                pdf.documentAttributes = [AnyHashable : Any]()
-                pdf.documentAttributes!["Title"] = title
-            }
-        } catch let error {
-            print(error)
+    static func change(pdfTitle title: String, for pdf: PDFDocument) {
+        
+        if var newAttributes = pdf.documentAttributes {
+            newAttributes["Title"] = title
+            pdf.setValue(newAttributes, forKey: "documentAttributes")
         }
+        
+        
+//        let temporaryFolder = FileManager.default.temporaryDirectory
+//        let fileName = "\(title).pdf"
+//        let temporaryFileURL = temporaryFolder.appendingPathComponent(fileName)
+//
+//        do {
+//            let pdfData = pdf.dataRepresentation()!
+//
+//            try pdfData.write(to: temporaryFileURL)
+//
+//            if var attributes = pdf.documentAttributes {
+//                attributes["Title"] = title
+//            } else {
+//                pdf.documentAttributes = [AnyHashable : Any]()
+//                pdf.documentAttributes!["Title"] = title
+//            }
+//        } catch let error {
+//            print(error)
+//        }
     }
 }
