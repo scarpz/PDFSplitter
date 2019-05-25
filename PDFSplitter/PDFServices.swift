@@ -20,10 +20,6 @@ class PDFServices {
         return allPages
     }
     
-//    static func transformIntoData(pages: [PDFPage]) -> [Data] {
-//        return pages.forEach({ allPageData.append($0.dataRepresentation!) })
-//    }
-    
     static func combine(pdfPages: [PDFPage]) -> PDFDocument {
         let pdf = PDFDocument()
         pdfPages.forEach({ pdf.insert($0, at: pdf.pageCount) })
