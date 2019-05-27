@@ -40,7 +40,7 @@ class PDFServices {
     static func createNewPDF(from pdf: PDFDocument, firstPage: Int, lastPage: Int) -> PDFDocument {
         let newPDF = PDFDocument()
         newPDF.documentAttributes = pdf.documentAttributes
-        for index in firstPage...lastPage {
+        for index in (firstPage - 1)...(lastPage - 1) {
             if let page = pdf.page(at: index) {
                 newPDF.insert(page, at: newPDF.pageCount)
             }
