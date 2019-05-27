@@ -14,6 +14,7 @@ class ActionViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet private weak var pdfView: PDFView!
+    @IBOutlet private weak var pdfNameLabel: UILabel!
     
     // MARK: - Properties
     private weak var pdf: PDFDocument!
@@ -75,10 +76,14 @@ extension ActionViewController {
     }
     
     private func display(pdf: PDFDocument) {
-        self.pdfView.displayMode = .singlePageContinuous
+        self.pdfView.displayMode = .singlePage
         self.pdfView.autoScales = true
         self.pdfView.displayDirection = .vertical
         self.pdfView.document = pdf
+        
+        if let pdfName = pdf.documentURL?.absoluteString {
+            self.pdfNameLabel.text = pdfName.components(separatedBy: "/").last
+        }
     }
     
     private func createPDFSplitterAlert() {

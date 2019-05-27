@@ -19,16 +19,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tb1-rt-ds9" customClass="PDFView">
-                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <rect key="frame" x="20" y="108" width="100" height="143"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tb1-rt-ds9" secondAttribute="height" multiplier="0.7:1" id="q35-le-K42"/>
+                                    <constraint firstAttribute="width" constant="100" id="svU-nV-vIz"/>
+                                </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ti3-V6-Dxo">
+                                <rect key="frame" x="128" y="108" width="227" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tb1-rt-ds9" firstAttribute="top" secondItem="Lwu-ch-yDa" secondAttribute="top" id="Kxr-ES-nex"/>
-                            <constraint firstItem="tb1-rt-ds9" firstAttribute="leading" secondItem="Lwu-ch-yDa" secondAttribute="leading" id="NMU-Z3-WVR"/>
-                            <constraint firstItem="Lwu-ch-yDa" firstAttribute="trailing" secondItem="tb1-rt-ds9" secondAttribute="trailing" id="ZLd-2L-DTI"/>
-                            <constraint firstAttribute="bottom" secondItem="tb1-rt-ds9" secondAttribute="bottom" id="c88-rU-1e0"/>
+                            <constraint firstItem="Ti3-V6-Dxo" firstAttribute="top" secondItem="tb1-rt-ds9" secondAttribute="top" id="D6R-Ej-b11"/>
+                            <constraint firstItem="tb1-rt-ds9" firstAttribute="top" secondItem="Lwu-ch-yDa" secondAttribute="top" constant="20" id="cUJ-T9-nh2"/>
+                            <constraint firstItem="Ti3-V6-Dxo" firstAttribute="leading" secondItem="tb1-rt-ds9" secondAttribute="trailing" constant="8" id="ilA-1P-6rz"/>
+                            <constraint firstItem="tb1-rt-ds9" firstAttribute="leading" secondItem="Lwu-ch-yDa" secondAttribute="leading" constant="20" id="s1U-tr-S5H"/>
+                            <constraint firstItem="Lwu-ch-yDa" firstAttribute="trailing" secondItem="Ti3-V6-Dxo" secondAttribute="trailing" constant="20" id="zSZ-LS-J2q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lwu-ch-yDa"/>
                     </view>
@@ -46,6 +57,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="pdfNameLabel" destination="Ti3-V6-Dxo" id="nD2-ec-5tf"/>
                         <outlet property="pdfView" destination="tb1-rt-ds9" id="KsE-tm-oQg"/>
                     </connections>
                 </viewController>
