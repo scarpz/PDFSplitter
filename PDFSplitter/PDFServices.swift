@@ -62,4 +62,9 @@ class PDFServices {
         
         return newPDF
     }
+    
+    static func getURLFileName(for pdf: PDFDocument) -> String {
+        guard let url = pdf.documentURL else { return "" }
+        return url.absoluteString.components(separatedBy: "/").last ?? ""
+    }
 }

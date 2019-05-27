@@ -80,10 +80,7 @@ extension ActionViewController {
         self.pdfView.autoScales = true
         self.pdfView.displayDirection = .vertical
         self.pdfView.document = pdf
-        
-        if let pdfName = pdf.documentURL?.absoluteString {
-            self.pdfNameLabel.text = pdfName.components(separatedBy: "/").last
-        }
+        self.pdfNameLabel.text = PDFServices.getURLFileName(for: pdf)
     }
     
     private func createPDFSplitterAlert() {
