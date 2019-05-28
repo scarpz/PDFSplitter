@@ -43,7 +43,7 @@ class ActionViewController: UIViewController {
     @IBAction func newPDFFromRange(_ sender: UIButton) {
         if let firstPageText = self.firstPageTextField.text, let firstPage = Int(firstPageText), let lastPageText = self.lastPageTextField.text, let lastPage = Int(lastPageText) {
             
-            if firstPage >= 1 && lastPage <= self.pdf.pageCount - 1 && lastPage > firstPage {
+            if firstPage >= 1 && lastPage <= self.pdf.pageCount && lastPage >= firstPage {
                 let newPDF = PDFServices.createNewPDF(from: self.pdf, firstPage: firstPage, lastPage: lastPage)
                 self.shareAlert(content: [newPDF.dataRepresentation()!])
             } else {
