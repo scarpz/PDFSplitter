@@ -18,7 +18,8 @@ class ActionViewController: UIViewController {
     @IBOutlet private weak var pagesLabel: UILabel!
     @IBOutlet private weak var firstPageTextField: UITextField!
     @IBOutlet private weak var lastPageTextField: UITextField!
-    @IBOutlet private weak var pageTextField: UITextField!
+    @IBOutlet private weak var pageLabel: UILabel!
+    @IBOutlet private weak var pageSlider: UISlider!
     
     // MARK: - Properties
     private weak var pdf: PDFDocument!
@@ -52,8 +53,13 @@ class ActionViewController: UIViewController {
         }
     }
     
+    @IBAction func sliderChanged(_ sender: UISlider) {
+        sender.setValue(round(sender.value / 1) * 1, animated: true)
+        self.pageLabel.text = "Selected page: \(Int(sender.value))"
+    }
+    
     @IBAction func extractPage(_ sender: UIButton) {
-        if let pageText = self.pageTextField.text, let pageNumber = Int(pageText), let page = pdf.page(at: pageNumber - 1) {
+        if let page = pdf.page(at: Int(self.pageSlider.value) - 1) {
             self.shareAlert(content: [page.dataRepresentation!])
         }
     }
@@ -92,6 +98,7 @@ extension ActionViewController {
                     DispatchQueue.main.async {
                         self.pdf = pdf
                         self.display(pdf: pdf)
+                        self.setupSlider()
                     }
                 } else {
                     self.done()
@@ -109,6 +116,15 @@ extension ActionViewController {
         self.pdfView.document = pdf
         self.pdfNameLabel.text = PDFServices.getURLFileName(for: pdf)
         self.pagesLabel.text = "\(pdf.pageCount) \(pdf.pageCount == 1 ? "page" : "pages")"
+    }
+    
+    private func setupSlider() {
+        
+        self.pageSlider.minimumValue = 1
+        self.pageSlider.maximumValue = Float(self.pdf.pageCount)
+        self.pageSlider.value = 1
+        
+        self.pageLabel.text = "Selected page: 1"
     }
     
 //    private func createPDFSplitterAlert() {
