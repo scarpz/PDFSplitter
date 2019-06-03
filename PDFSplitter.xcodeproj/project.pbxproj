@@ -13,6 +13,18 @@
 		18CF153C2297517500099ABE /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF153B2297517500099ABE /* ActionViewController.swift */; };
 		18CF153F2297517500099ABE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CF153D2297517500099ABE /* MainInterface.storyboard */; };
 		18CF15432297517500099ABE /* PDFSplitterExt.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 18CF15372297517500099ABE /* PDFSplitterExt.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2D35E86722A532BF0097A923 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35E86622A532BF0097A923 /* RangeSlider.swift */; };
+		2D35E86922A532E90097A923 /* RangeSliderTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35E86822A532E90097A923 /* RangeSliderTrackLayer.swift */; };
+		2D35E86B22A5330B0097A923 /* RangeSliderThumbLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35E86A22A5330B0097A923 /* RangeSliderThumbLayer.swift */; };
+		2D35E86D22A533410097A923 /* RectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35E86C22A533410097A923 /* RectExtension.swift */; };
+		2D35E86F22A5339C0097A923 /* PointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35E86E22A5339C0097A923 /* PointExtension.swift */; };
+		2D35E87122A533C00097A923 /* TapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35E87022A533C00097A923 /* TapticEngine.swift */; };
+		2D35E87222A5341D0097A923 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35E86622A532BF0097A923 /* RangeSlider.swift */; };
+		2D35E87322A5341D0097A923 /* RangeSliderTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35E86822A532E90097A923 /* RangeSliderTrackLayer.swift */; };
+		2D35E87422A5341D0097A923 /* RangeSliderThumbLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35E86A22A5330B0097A923 /* RangeSliderThumbLayer.swift */; };
+		2D35E87522A5341D0097A923 /* RectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35E86C22A533410097A923 /* RectExtension.swift */; };
+		2D35E87622A5341D0097A923 /* PointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35E86E22A5339C0097A923 /* PointExtension.swift */; };
+		2D35E87722A5341D0097A923 /* TapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35E87022A533C00097A923 /* TapticEngine.swift */; };
 		2DA1C01222953EA30075BB86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1C01122953EA30075BB86 /* AppDelegate.swift */; };
 		2DA1C01422953EA30075BB86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1C01322953EA30075BB86 /* ViewController.swift */; };
 		2DA1C01722953EA30075BB86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA1C01522953EA30075BB86 /* Main.storyboard */; };
@@ -55,6 +67,12 @@
 		18CF15402297517500099ABE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18FC176622995E4F008C6374 /* PDFSplitter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PDFSplitter.entitlements; sourceTree = "<group>"; };
 		18FC176722995E67008C6374 /* PDFSplitterExt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PDFSplitterExt.entitlements; sourceTree = "<group>"; };
+		2D35E86622A532BF0097A923 /* RangeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
+		2D35E86822A532E90097A923 /* RangeSliderTrackLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderTrackLayer.swift; sourceTree = "<group>"; };
+		2D35E86A22A5330B0097A923 /* RangeSliderThumbLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderThumbLayer.swift; sourceTree = "<group>"; };
+		2D35E86C22A533410097A923 /* RectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectExtension.swift; sourceTree = "<group>"; };
+		2D35E86E22A5339C0097A923 /* PointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointExtension.swift; sourceTree = "<group>"; };
+		2D35E87022A533C00097A923 /* TapticEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapticEngine.swift; sourceTree = "<group>"; };
 		2DA1C00E22953EA30075BB86 /* PDFSplitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFSplitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DA1C01122953EA30075BB86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DA1C01322953EA30075BB86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,9 +112,40 @@
 			path = PDFSplitterExt;
 			sourceTree = "<group>";
 		};
+		2D35E86422A5327E0097A923 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				180E6B7D2295DFA100B7302E /* PDFServices.swift */,
+				2D35E86522A5328A0097A923 /* RangeSlider */,
+				2D35E87022A533C00097A923 /* TapticEngine.swift */,
+				2D35E87822A534550097A923 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2D35E86522A5328A0097A923 /* RangeSlider */ = {
+			isa = PBXGroup;
+			children = (
+				2D35E86622A532BF0097A923 /* RangeSlider.swift */,
+				2D35E86822A532E90097A923 /* RangeSliderTrackLayer.swift */,
+				2D35E86A22A5330B0097A923 /* RangeSliderThumbLayer.swift */,
+			);
+			path = RangeSlider;
+			sourceTree = "<group>";
+		};
+		2D35E87822A534550097A923 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2D35E86C22A533410097A923 /* RectExtension.swift */,
+				2D35E86E22A5339C0097A923 /* PointExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2DA1C00522953EA20075BB86 = {
 			isa = PBXGroup;
 			children = (
+				2D35E86422A5327E0097A923 /* Common */,
 				2DA1C01022953EA30075BB86 /* PDFSplitter */,
 				18CF15382297517500099ABE /* PDFSplitterExt */,
 				2DA1C00F22953EA30075BB86 /* Products */,
@@ -123,7 +172,6 @@
 				2DA1C01822953EA30075BB86 /* Assets.xcassets */,
 				2DA1C01A22953EA30075BB86 /* LaunchScreen.storyboard */,
 				2DA1C01D22953EA30075BB86 /* Info.plist */,
-				180E6B7D2295DFA100B7302E /* PDFServices.swift */,
 			);
 			path = PDFSplitter;
 			sourceTree = "<group>";
@@ -242,7 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D35E87722A5341D0097A923 /* TapticEngine.swift in Sources */,
+				2D35E87422A5341D0097A923 /* RangeSliderThumbLayer.swift in Sources */,
+				2D35E87622A5341D0097A923 /* PointExtension.swift in Sources */,
+				2D35E87522A5341D0097A923 /* RectExtension.swift in Sources */,
+				2D35E87322A5341D0097A923 /* RangeSliderTrackLayer.swift in Sources */,
 				2DAEFA3122980C6700BE9377 /* PDFServices.swift in Sources */,
+				2D35E87222A5341D0097A923 /* RangeSlider.swift in Sources */,
 				18CF153C2297517500099ABE /* ActionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,9 +305,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D35E86D22A533410097A923 /* RectExtension.swift in Sources */,
+				2D35E87122A533C00097A923 /* TapticEngine.swift in Sources */,
+				2D35E86722A532BF0097A923 /* RangeSlider.swift in Sources */,
+				2D35E86922A532E90097A923 /* RangeSliderTrackLayer.swift in Sources */,
 				2DA1C01422953EA30075BB86 /* ViewController.swift in Sources */,
 				2DA1C01222953EA30075BB86 /* AppDelegate.swift in Sources */,
 				180E6B7E2295DFA100B7302E /* PDFServices.swift in Sources */,
+				2D35E86F22A5339C0097A923 /* PointExtension.swift in Sources */,
+				2D35E86B22A5330B0097A923 /* RangeSliderThumbLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
