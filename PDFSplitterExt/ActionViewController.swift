@@ -16,10 +16,10 @@ class ActionViewController: UIViewController {
     @IBOutlet private weak var pdfView: PDFView!
     @IBOutlet private weak var pdfNameLabel: UILabel!
     @IBOutlet private weak var pagesLabel: UILabel!
-    @IBOutlet private weak var firstPageTextField: UITextField!
-    @IBOutlet private weak var lastPageTextField: UITextField!
-    @IBOutlet private weak var pageLabel: UILabel!
-    @IBOutlet private weak var pageSlider: UISlider!
+    @IBOutlet private weak var rangePagesLabel: UILabel!
+    @IBOutlet private weak var rangePageSlider: RangeSlider!
+    @IBOutlet private weak var singlePageLabel: UILabel!
+    @IBOutlet private weak var singlePageSlider: UISlider!
     
     // MARK: - Properties
     private weak var pdf: PDFDocument!
@@ -42,24 +42,29 @@ class ActionViewController: UIViewController {
     }
     
     @IBAction func newPDFFromRange(_ sender: UIButton) {
-        if let firstPageText = self.firstPageTextField.text, let firstPage = Int(firstPageText), let lastPageText = self.lastPageTextField.text, let lastPage = Int(lastPageText) {
-            
-            if firstPage >= 1 && lastPage <= self.pdf.pageCount && lastPage >= firstPage {
-                let newPDF = PDFServices.createNewPDF(from: self.pdf, firstPage: firstPage, lastPage: lastPage)
-                self.shareAlert(content: [newPDF.dataRepresentation()!])
-            } else {
-                // Alert with error
-            }
+        
+        let firstPage = Int(self.rangePageSlider.lowerValue)
+        let lastPage = Int(self.rangePageSlider.upperValue)
+        
+        if firstPage >= 1 && lastPage <= self.pdf.pageCount && lastPage >= firstPage {
+            let newPDF = PDFServices.createNewPDF(from: self.pdf, firstPage: firstPage, lastPage: lastPage)
+            self.shareAlert(content: [newPDF.dataRepresentation()!])
+        } else {
+            // Alert with error
         }
     }
     
-    @IBAction func sliderChanged(_ sender: UISlider) {
+    @IBAction func rangePageSliderChanged(_ sender: RangeSlider) {
+        self.rangePagesLabel.text = "Selected pages: \(Int(self.rangePageSlider.lowerValue)) - \(Int(self.rangePageSlider.upperValue))"
+    }
+    
+    @IBAction func singlePageSliderChanged(_ sender: UISlider) {
         sender.setValue(round(sender.value / 1) * 1, animated: true)
-        self.pageLabel.text = "Selected page: \(Int(sender.value))"
+        self.singlePageLabel.text = "Selected page: \(Int(sender.value))"
     }
     
     @IBAction func extractPage(_ sender: UIButton) {
-        if let page = pdf.page(at: Int(self.pageSlider.value) - 1) {
+        if let page = pdf.page(at: Int(self.singlePageSlider.value) - 1) {
             self.shareAlert(content: [page.dataRepresentation!])
         }
     }
@@ -98,7 +103,7 @@ extension ActionViewController {
                     DispatchQueue.main.async {
                         self.pdf = pdf
                         self.display(pdf: pdf)
-                        self.setupSlider()
+                        self.setupSliders()
                     }
                 } else {
                     self.done()
@@ -118,13 +123,19 @@ extension ActionViewController {
         self.pagesLabel.text = "\(pdf.pageCount) \(pdf.pageCount == 1 ? "page" : "pages")"
     }
     
-    private func setupSlider() {
+    private func setupSliders() {
         
-        self.pageSlider.minimumValue = 1
-        self.pageSlider.maximumValue = Float(self.pdf.pageCount)
-        self.pageSlider.value = 1
+        self.singlePageSlider.minimumValue = 1
+        self.singlePageSlider.maximumValue = Float(self.pdf.pageCount)
+        self.singlePageSlider.value = 1
+        self.singlePageLabel.text = "Selected page: 1"
         
-        self.pageLabel.text = "Selected page: 1"
+        self.rangePageSlider.maximumValue = CGFloat(self.pdf.pageCount)
+        self.rangePageSlider.minimumValue = 1
+        self.rangePageSlider.lowerValue = 1
+        self.rangePageSlider.upperValue = CGFloat(self.pdf.pageCount)
+//        self.rangePageSlider.
+        self.rangePagesLabel.text = "Selected pages: 1 - \(Int(self.rangePageSlider.upperValue))"
     }
     
 //    private func createPDFSplitterAlert() {
