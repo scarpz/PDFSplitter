@@ -59,7 +59,7 @@ class ActionViewController: UIViewController {
     }
     
     @IBAction func singlePageSliderChanged(_ sender: UISlider) {
-        sender.setValue(round(sender.value / 1) * 1, animated: true)
+//        sender.setValue(round(sender.value / 1) * 1, animated: true)
         self.singlePageLabel.text = "Selected page: \(Int(sender.value))"
     }
     
@@ -137,56 +137,7 @@ extension ActionViewController {
 //        self.rangePageSlider.
         self.rangePagesLabel.text = "Selected pages: 1 - \(Int(self.rangePageSlider.upperValue))"
     }
-    
-//    private func createPDFSplitterAlert() {
-//        let outterAlert = UIAlertController(title: "PDF Splitter", message: "What do you want to do with this PDF?", preferredStyle: .actionSheet)
-//        outterAlert.addAction(UIAlertAction(title: "Split all pages", style: .default, handler: { _ in
-//            let allPages = PDFServices.splitPages(from: self.pdf).map({ $0.dataRepresentation! })
-//            self.shareAlert(content: allPages)
-//        }))
-//        outterAlert.addAction(UIAlertAction(title: "Extract PDF between pages", style: .default, handler: { _ in
-//            self.createPageRangePDFAlert()
-//        }))
-//        outterAlert.addAction(UIAlertAction(title: "Change PDF filename", style: .default, handler: { _ in
-//            let newPDF = PDFServices.change(pdfTitle: "Tchenefleners", for: self.pdf)
-//            self.shareAlert(content: [newPDF.dataRepresentation()!])
-//        }))
-//        outterAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-//        self.present(outterAlert, animated: true, completion: nil)
-//    }
-    
-//    private func createPageRangePDFAlert() {
-//        let innerAlert = UIAlertController(title: "Which page range you want to extract the new PDF", message: nil, preferredStyle: .alert)
-//        innerAlert.addTextField(configurationHandler: { beginPageTextField in
-//            beginPageTextField.keyboardType = .numberPad
-//            beginPageTextField.placeholder = "Begin page"
-//        })
-//        innerAlert.addTextField(configurationHandler: { endPageTextField in
-//            endPageTextField.keyboardType = .numberPad
-//            endPageTextField.placeholder = "End page"
-//        })
-//        innerAlert.addAction(UIAlertAction(title: "Extract PDF", style: .default, handler: { _ in
-//            guard let beginPageText = innerAlert.textFields?[0].text,
-//                  let beginPage = Int(beginPageText),
-//                  let endPageText = innerAlert.textFields?[1].text,
-//                  let endPage = Int(endPageText) else {
-//                    self.done()
-//                    return
-//            }
-//
-//            if beginPage > 1 && (endPage <= self.pdf.pageCount && endPage > beginPage) {
-//                let newPDF = PDFServices.createNewPDF(from: self.pdf, firstPage: beginPage, lastPage: endPage)
-//                self.shareAlert(content: [newPDF.dataRepresentation()!])
-//            } else {
-//                self.done()
-//            }
-//        }))
-//        innerAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
-//            self.done()
-//        }))
-//        self.present(innerAlert, animated: true, completion: nil)
-//    }
-    
+
     private func shareAlert(content: [Any]) {
         let shareAlert = UIActivityViewController(activityItems: content, applicationActivities: nil)
         self.present(shareAlert, animated: true, completion: nil)

@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ohQ-Kh-Sba">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="645.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="640.66666666666663"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tb1-rt-ds9" customClass="PDFView">
                                                 <rect key="frame" x="20" y="30" width="100" height="143"/>
@@ -44,111 +44,108 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZh-a0-YrF">
-                                                <rect key="frame" x="30" y="223" width="315" height="45"/>
-                                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="HVo-4U-qJl"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <state key="normal" title="SPLIT ALL PAGES">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="splitAllPages:" destination="OYh-f0-sq6" eventType="touchUpInside" id="gMT-mu-4FO"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GqL-rS-2hT">
-                                                <rect key="frame" x="30" y="387" width="315" height="45"/>
-                                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="2Dy-8v-UKV"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <state key="normal" title="CREATE NEW PDF FROM RANGE">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="newPDFFromRange:" destination="OYh-f0-sq6" eventType="touchUpInside" id="kni-IX-8iy"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bf5-LS-Bal">
-                                                <rect key="frame" x="30" y="550.33333333333337" width="315" height="45"/>
-                                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="dRE-NZ-af4"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <state key="normal" title="EXTRACT PAGE">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="extractPage:" destination="OYh-f0-sq6" eventType="touchUpInside" id="Fet-rQ-Dsf"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JD-d0-3IB">
-                                                <rect key="frame" x="30" y="482" width="315" height="20.333333333333314"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8yJ-H7-g6r">
-                                                <rect key="frame" x="28" y="510.33333333333337" width="319" height="31"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="d1v-lw-2Fa"/>
-                                                </constraints>
-                                                <connections>
-                                                    <action selector="singlePageSliderChanged:" destination="OYh-f0-sq6" eventType="valueChanged" id="Ld3-ie-IP4"/>
-                                                </connections>
-                                            </slider>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4h-Mk-zum" customClass="RangeSlider" customModule="PDFSplitterExt" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="347" width="315" height="30"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="lfd-pd-oPO"/>
-                                                </constraints>
-                                                <connections>
-                                                    <action selector="rangePageSliderChanged:" destination="OYh-f0-sq6" eventType="valueChanged" id="Rog-Kd-dfQ"/>
-                                                </connections>
-                                            </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N03-SI-9AO">
-                                                <rect key="frame" x="30" y="318" width="315" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Sbj-jO-2s4">
+                                                <rect key="frame" x="30" y="223.00000000000003" width="315" height="367.66666666666674"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZh-a0-YrF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="315" height="45"/>
+                                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="HVo-4U-qJl"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                        <state key="normal" title="SPLIT ALL PAGES">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="splitAllPages:" destination="OYh-f0-sq6" eventType="touchUpInside" id="gMT-mu-4FO"/>
+                                                        </connections>
+                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jL3-uR-iRC">
+                                                        <rect key="frame" x="0.0" y="95" width="315" height="111.33333333333331"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JD-d0-3IB">
+                                                                <rect key="frame" x="0.0" y="0.0" width="315" height="20.333333333333332"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8yJ-H7-g6r">
+                                                                <rect key="frame" x="-2" y="28.333333333333314" width="319" height="31"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="d1v-lw-2Fa"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="singlePageSliderChanged:" destination="OYh-f0-sq6" eventType="valueChanged" id="Ld3-ie-IP4"/>
+                                                                </connections>
+                                                            </slider>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bf5-LS-Bal">
+                                                                <rect key="frame" x="0.0" y="66.333333333333314" width="315" height="45"/>
+                                                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="dRE-NZ-af4"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                <state key="normal" title="EXTRACT PAGE">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="extractPage:" destination="OYh-f0-sq6" eventType="touchUpInside" id="Fet-rQ-Dsf"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lc6-x9-EIm">
+                                                        <rect key="frame" x="0.0" y="256.33333333333337" width="315" height="111.33333333333331"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N03-SI-9AO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="315" height="20.333333333333332"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4h-Mk-zum" customClass="RangeSlider" customModule="PDFSplitterExt" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="28.333333333333258" width="315" height="30"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="lfd-pd-oPO"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="rangePageSliderChanged:" destination="OYh-f0-sq6" eventType="valueChanged" id="Rog-Kd-dfQ"/>
+                                                                </connections>
+                                                            </view>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GqL-rS-2hT">
+                                                                <rect key="frame" x="0.0" y="66.333333333333258" width="315" height="45"/>
+                                                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="45" id="2Dy-8v-UKV"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                <state key="normal" title="CREATE NEW PDF FROM RANGE">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="newPDFFromRange:" destination="OYh-f0-sq6" eventType="touchUpInside" id="kni-IX-8iy"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="1JD-d0-3IB" firstAttribute="leading" secondItem="ohQ-Kh-Sba" secondAttribute="leading" constant="30" id="2RV-QP-LgK"/>
                                             <constraint firstItem="Ti3-V6-Dxo" firstAttribute="top" secondItem="tb1-rt-ds9" secondAttribute="top" id="8ur-3n-v4X"/>
                                             <constraint firstItem="m0E-iy-MJg" firstAttribute="top" secondItem="Ti3-V6-Dxo" secondAttribute="bottom" constant="2" id="BPN-Mf-Ia5"/>
-                                            <constraint firstAttribute="trailing" secondItem="QZh-a0-YrF" secondAttribute="trailing" constant="30" id="D1O-9I-2SA"/>
-                                            <constraint firstItem="N03-SI-9AO" firstAttribute="top" secondItem="QZh-a0-YrF" secondAttribute="bottom" constant="50" id="Eko-d8-0em"/>
-                                            <constraint firstItem="8yJ-H7-g6r" firstAttribute="leading" secondItem="ohQ-Kh-Sba" secondAttribute="leading" constant="30" id="F9n-t3-DY4"/>
-                                            <constraint firstAttribute="trailing" secondItem="8yJ-H7-g6r" secondAttribute="trailing" constant="30" id="IMC-S6-CWp"/>
-                                            <constraint firstAttribute="trailing" secondItem="1JD-d0-3IB" secondAttribute="trailing" constant="30" id="JPP-ld-S75"/>
-                                            <constraint firstItem="f4h-Mk-zum" firstAttribute="top" secondItem="N03-SI-9AO" secondAttribute="bottom" constant="8" id="KJu-BG-tcF"/>
-                                            <constraint firstAttribute="bottom" secondItem="Bf5-LS-Bal" secondAttribute="bottom" constant="50" id="MAR-VY-dep"/>
-                                            <constraint firstItem="Bf5-LS-Bal" firstAttribute="leading" secondItem="ohQ-Kh-Sba" secondAttribute="leading" constant="30" id="P9Z-Aq-5T0"/>
-                                            <constraint firstItem="Bf5-LS-Bal" firstAttribute="top" secondItem="8yJ-H7-g6r" secondAttribute="bottom" constant="10" id="QB1-7A-OF9"/>
-                                            <constraint firstAttribute="trailing" secondItem="GqL-rS-2hT" secondAttribute="trailing" constant="30" id="S4g-Wb-QoD"/>
-                                            <constraint firstAttribute="trailing" secondItem="Bf5-LS-Bal" secondAttribute="trailing" constant="30" id="Tfs-RA-c4E"/>
-                                            <constraint firstItem="N03-SI-9AO" firstAttribute="leading" secondItem="ohQ-Kh-Sba" secondAttribute="leading" constant="30" id="Vxk-LI-A4H"/>
-                                            <constraint firstItem="QZh-a0-YrF" firstAttribute="top" secondItem="tb1-rt-ds9" secondAttribute="bottom" constant="50" id="Wno-WZ-Vrg"/>
+                                            <constraint firstAttribute="bottom" secondItem="Sbj-jO-2s4" secondAttribute="bottom" constant="50" id="Ovt-eU-ZkJ"/>
                                             <constraint firstItem="m0E-iy-MJg" firstAttribute="trailing" secondItem="Ti3-V6-Dxo" secondAttribute="trailing" id="ZuP-8j-YpG"/>
-                                            <constraint firstAttribute="trailing" secondItem="N03-SI-9AO" secondAttribute="trailing" constant="30" id="Zy4-An-GmU"/>
-                                            <constraint firstItem="GqL-rS-2hT" firstAttribute="top" secondItem="f4h-Mk-zum" secondAttribute="bottom" constant="10" id="a0d-pt-FeC"/>
                                             <constraint firstItem="tb1-rt-ds9" firstAttribute="top" secondItem="ohQ-Kh-Sba" secondAttribute="top" constant="30" id="eGi-By-Fd3"/>
                                             <constraint firstItem="tb1-rt-ds9" firstAttribute="leading" secondItem="ohQ-Kh-Sba" secondAttribute="leading" constant="20" id="eiE-Do-rtu"/>
                                             <constraint firstItem="Ti3-V6-Dxo" firstAttribute="leading" secondItem="tb1-rt-ds9" secondAttribute="trailing" constant="8" id="j53-g3-jAD"/>
                                             <constraint firstItem="m0E-iy-MJg" firstAttribute="leading" secondItem="Ti3-V6-Dxo" secondAttribute="leading" id="l87-UE-Xxw"/>
-                                            <constraint firstItem="f4h-Mk-zum" firstAttribute="leading" secondItem="ohQ-Kh-Sba" secondAttribute="leading" constant="30" id="oz5-PO-Y5v"/>
-                                            <constraint firstItem="1JD-d0-3IB" firstAttribute="top" secondItem="GqL-rS-2hT" secondAttribute="bottom" constant="50" id="qIE-QJ-DjO"/>
-                                            <constraint firstAttribute="trailing" secondItem="f4h-Mk-zum" secondAttribute="trailing" constant="30" id="sJx-xe-6vG"/>
-                                            <constraint firstItem="8yJ-H7-g6r" firstAttribute="top" secondItem="1JD-d0-3IB" secondAttribute="bottom" constant="8" id="uZm-0c-Mnv"/>
-                                            <constraint firstItem="GqL-rS-2hT" firstAttribute="leading" secondItem="ohQ-Kh-Sba" secondAttribute="leading" constant="30" id="vmf-pK-0ky"/>
-                                            <constraint firstItem="QZh-a0-YrF" firstAttribute="leading" secondItem="ohQ-Kh-Sba" secondAttribute="leading" constant="30" id="yje-wB-Nk3"/>
+                                            <constraint firstItem="Sbj-jO-2s4" firstAttribute="leading" secondItem="ohQ-Kh-Sba" secondAttribute="leading" constant="30" id="mRB-1i-i4f"/>
+                                            <constraint firstAttribute="trailing" secondItem="Sbj-jO-2s4" secondAttribute="trailing" constant="30" id="sdj-t9-2IU"/>
+                                            <constraint firstItem="Sbj-jO-2s4" firstAttribute="top" secondItem="tb1-rt-ds9" secondAttribute="bottom" constant="50" id="yYv-jx-csd"/>
                                             <constraint firstAttribute="trailing" secondItem="Ti3-V6-Dxo" secondAttribute="trailing" constant="20" id="zdY-Te-ffw"/>
                                         </constraints>
                                     </view>
