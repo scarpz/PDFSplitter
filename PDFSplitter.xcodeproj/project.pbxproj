@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		180E6B7C2295D63500B7302E /* Document.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 180E6B7B2295D63500B7302E /* Document.pdf */; };
 		180E6B7E2295DFA100B7302E /* PDFServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E6B7D2295DFA100B7302E /* PDFServices.swift */; };
+		18406FF922C2BE120099AAD5 /* ExtractPagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18406FF822C2BE120099AAD5 /* ExtractPagesViewController.swift */; };
+		18406FFB22C2BFC20099AAD5 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18406FFA22C2BFC20099AAD5 /* PageCell.swift */; };
+		18406FFC22C2CA9F0099AAD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DA1C01822953EA30075BB86 /* Assets.xcassets */; };
 		18CF153A2297517500099ABE /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18CF15392297517500099ABE /* Media.xcassets */; };
 		18CF153C2297517500099ABE /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF153B2297517500099ABE /* ActionViewController.swift */; };
 		18CF153F2297517500099ABE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CF153D2297517500099ABE /* MainInterface.storyboard */; };
@@ -60,6 +63,8 @@
 /* Begin PBXFileReference section */
 		180E6B7B2295D63500B7302E /* Document.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Document.pdf; sourceTree = "<group>"; };
 		180E6B7D2295DFA100B7302E /* PDFServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFServices.swift; sourceTree = "<group>"; };
+		18406FF822C2BE120099AAD5 /* ExtractPagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractPagesViewController.swift; sourceTree = "<group>"; };
+		18406FFA22C2BFC20099AAD5 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		18CF15372297517500099ABE /* PDFSplitterExt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PDFSplitterExt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CF15392297517500099ABE /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		18CF153B2297517500099ABE /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +113,8 @@
 				18CF153B2297517500099ABE /* ActionViewController.swift */,
 				18CF153D2297517500099ABE /* MainInterface.storyboard */,
 				18CF15402297517500099ABE /* Info.plist */,
+				18406FF822C2BE120099AAD5 /* ExtractPagesViewController.swift */,
+				18406FFA22C2BFC20099AAD5 /* PageCell.swift */,
 			);
 			path = PDFSplitterExt;
 			sourceTree = "<group>";
@@ -268,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18CF153A2297517500099ABE /* Media.xcassets in Resources */,
+				18406FFC22C2CA9F0099AAD5 /* Assets.xcassets in Resources */,
 				18CF153F2297517500099ABE /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +304,8 @@
 				2D35E87522A5341D0097A923 /* RectExtension.swift in Sources */,
 				2D35E87322A5341D0097A923 /* RangeSliderTrackLayer.swift in Sources */,
 				2DAEFA3122980C6700BE9377 /* PDFServices.swift in Sources */,
+				18406FFB22C2BFC20099AAD5 /* PageCell.swift in Sources */,
+				18406FF922C2BE120099AAD5 /* ExtractPagesViewController.swift in Sources */,
 				2D35E87222A5341D0097A923 /* RangeSlider.swift in Sources */,
 				18CF153C2297517500099ABE /* ActionViewController.swift in Sources */,
 			);

@@ -59,7 +59,6 @@ class ActionViewController: UIViewController {
     }
     
     @IBAction func singlePageSliderChanged(_ sender: UISlider) {
-//        sender.setValue(round(sender.value / 1) * 1, animated: true)
         self.singlePageLabel.text = "Selected page: \(Int(sender.value))"
     }
     
@@ -69,8 +68,12 @@ class ActionViewController: UIViewController {
         }
     }
     
-    @IBAction func pdfSplitter(_ sender: UIBarButtonItem) {
-//        self.createPDFSplitterAlert()
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ExtractPagesSegue" {
+            let destination = segue.destination as! ExtractPagesViewController
+            destination.pdf = self.pdf
+        }
     }
 }
 
