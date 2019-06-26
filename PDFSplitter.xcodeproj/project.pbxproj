@@ -11,7 +11,6 @@
 		180E6B7E2295DFA100B7302E /* PDFServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E6B7D2295DFA100B7302E /* PDFServices.swift */; };
 		18406FF922C2BE120099AAD5 /* ExtractPagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18406FF822C2BE120099AAD5 /* ExtractPagesViewController.swift */; };
 		18406FFB22C2BFC20099AAD5 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18406FFA22C2BFC20099AAD5 /* PageCell.swift */; };
-		18406FFC22C2CA9F0099AAD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DA1C01822953EA30075BB86 /* Assets.xcassets */; };
 		18CF153A2297517500099ABE /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18CF15392297517500099ABE /* Media.xcassets */; };
 		18CF153C2297517500099ABE /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF153B2297517500099ABE /* ActionViewController.swift */; };
 		18CF153F2297517500099ABE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CF153D2297517500099ABE /* MainInterface.storyboard */; };
@@ -28,6 +27,12 @@
 		2D35E87522A5341D0097A923 /* RectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35E86C22A533410097A923 /* RectExtension.swift */; };
 		2D35E87622A5341D0097A923 /* PointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35E86E22A5339C0097A923 /* PointExtension.swift */; };
 		2D35E87722A5341D0097A923 /* TapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D35E87022A533C00097A923 /* TapticEngine.swift */; };
+		2D4BB12022C3612400DD75E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D4BB11F22C3612400DD75E1 /* Assets.xcassets */; };
+		2D4BB12122C3612D00DD75E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D4BB11F22C3612400DD75E1 /* Assets.xcassets */; };
+		2D4BB12722C3647500DD75E1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BB12622C3647500DD75E1 /* BaseViewController.swift */; };
+		2D4BB12822C3647500DD75E1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BB12622C3647500DD75E1 /* BaseViewController.swift */; };
+		2D4BB12A22C366BC00DD75E1 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BB12922C366BC00DD75E1 /* ViewControllerExtension.swift */; };
+		2D4BB12B22C366BC00DD75E1 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BB12922C366BC00DD75E1 /* ViewControllerExtension.swift */; };
 		2DA1C01222953EA30075BB86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1C01122953EA30075BB86 /* AppDelegate.swift */; };
 		2DA1C01422953EA30075BB86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1C01322953EA30075BB86 /* ViewController.swift */; };
 		2DA1C01722953EA30075BB86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA1C01522953EA30075BB86 /* Main.storyboard */; };
@@ -78,6 +83,9 @@
 		2D35E86C22A533410097A923 /* RectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectExtension.swift; sourceTree = "<group>"; };
 		2D35E86E22A5339C0097A923 /* PointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointExtension.swift; sourceTree = "<group>"; };
 		2D35E87022A533C00097A923 /* TapticEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapticEngine.swift; sourceTree = "<group>"; };
+		2D4BB11F22C3612400DD75E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Common/Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		2D4BB12622C3647500DD75E1 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2D4BB12922C366BC00DD75E1 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		2DA1C00E22953EA30075BB86 /* PDFSplitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFSplitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DA1C01122953EA30075BB86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DA1C01322953EA30075BB86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,10 +130,11 @@
 		2D35E86422A5327E0097A923 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				180E6B7D2295DFA100B7302E /* PDFServices.swift */,
+				2D4BB11D22C360D500DD75E1 /* Services */,
 				2D35E86522A5328A0097A923 /* RangeSlider */,
-				2D35E87022A533C00097A923 /* TapticEngine.swift */,
 				2D35E87822A534550097A923 /* Extensions */,
+				2D4BB11E22C360E500DD75E1 /* Resources */,
+				2D4BB12522C3647500DD75E1 /* ViewControllers */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -145,8 +154,34 @@
 			children = (
 				2D35E86C22A533410097A923 /* RectExtension.swift */,
 				2D35E86E22A5339C0097A923 /* PointExtension.swift */,
+				2D4BB12922C366BC00DD75E1 /* ViewControllerExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2D4BB11D22C360D500DD75E1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				180E6B7D2295DFA100B7302E /* PDFServices.swift */,
+				2D35E87022A533C00097A923 /* TapticEngine.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2D4BB11E22C360E500DD75E1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2D4BB11F22C3612400DD75E1 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2D4BB12522C3647500DD75E1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2D4BB12622C3647500DD75E1 /* BaseViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		2DA1C00522953EA20075BB86 = {
@@ -275,7 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18CF153A2297517500099ABE /* Media.xcassets in Resources */,
-				18406FFC22C2CA9F0099AAD5 /* Assets.xcassets in Resources */,
+				2D4BB12122C3612D00DD75E1 /* Assets.xcassets in Resources */,
 				18CF153F2297517500099ABE /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +323,7 @@
 				2DA1C01922953EA30075BB86 /* Assets.xcassets in Resources */,
 				2DA1C01722953EA30075BB86 /* Main.storyboard in Resources */,
 				180E6B7C2295D63500B7302E /* Document.pdf in Resources */,
+				2D4BB12022C3612400DD75E1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,9 +338,11 @@
 				2D35E87422A5341D0097A923 /* RangeSliderThumbLayer.swift in Sources */,
 				2D35E87622A5341D0097A923 /* PointExtension.swift in Sources */,
 				2D35E87522A5341D0097A923 /* RectExtension.swift in Sources */,
+				2D4BB12822C3647500DD75E1 /* BaseViewController.swift in Sources */,
 				2D35E87322A5341D0097A923 /* RangeSliderTrackLayer.swift in Sources */,
 				2DAEFA3122980C6700BE9377 /* PDFServices.swift in Sources */,
 				18406FFB22C2BFC20099AAD5 /* PageCell.swift in Sources */,
+				2D4BB12B22C366BC00DD75E1 /* ViewControllerExtension.swift in Sources */,
 				18406FF922C2BE120099AAD5 /* ExtractPagesViewController.swift in Sources */,
 				2D35E87222A5341D0097A923 /* RangeSlider.swift in Sources */,
 				18CF153C2297517500099ABE /* ActionViewController.swift in Sources */,
@@ -317,10 +355,12 @@
 			files = (
 				2D35E86D22A533410097A923 /* RectExtension.swift in Sources */,
 				2D35E87122A533C00097A923 /* TapticEngine.swift in Sources */,
+				2D4BB12722C3647500DD75E1 /* BaseViewController.swift in Sources */,
 				2D35E86722A532BF0097A923 /* RangeSlider.swift in Sources */,
 				2D35E86922A532E90097A923 /* RangeSliderTrackLayer.swift in Sources */,
 				2DA1C01422953EA30075BB86 /* ViewController.swift in Sources */,
 				2DA1C01222953EA30075BB86 /* AppDelegate.swift in Sources */,
+				2D4BB12A22C366BC00DD75E1 /* ViewControllerExtension.swift in Sources */,
 				180E6B7E2295DFA100B7302E /* PDFServices.swift in Sources */,
 				2D35E86F22A5339C0097A923 /* PointExtension.swift in Sources */,
 				2D35E86B22A5330B0097A923 /* RangeSliderThumbLayer.swift in Sources */,
@@ -369,8 +409,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7T8R3N4U6X;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PDFSplitterExt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,7 +421,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -388,8 +429,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7T8R3N4U6X;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PDFSplitterExt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -399,7 +441,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -454,7 +496,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -509,7 +551,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -527,7 +569,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PDFSplitter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -535,7 +577,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.scarpz.PDFSplitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -547,7 +589,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PDFSplitter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -555,7 +597,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.scarpz.PDFSplitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

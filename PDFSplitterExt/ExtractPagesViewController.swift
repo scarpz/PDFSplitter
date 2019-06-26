@@ -27,6 +27,7 @@ class ExtractPagesViewController: UIViewController {
     @IBAction func extractPages(_ sender: UIBarButtonItem) {
         
         let newPDF = PDFDocument()
+        newPDF.documentAttributes = self.pdf.documentAttributes
         
         for index in 0..<self.pdf.pageCount {
             

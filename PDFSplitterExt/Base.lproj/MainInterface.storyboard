@@ -58,7 +58,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="splitAllPages:" destination="OYh-f0-sq6" eventType="touchUpInside" id="gMT-mu-4FO"/>
+                                                            <action selector="splitAllPages:" destination="OYh-f0-sq6" eventType="touchUpInside" id="989-bE-RQO"/>
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jL3-uR-iRC">
@@ -76,7 +76,7 @@
                                                                     <constraint firstAttribute="height" constant="30" id="d1v-lw-2Fa"/>
                                                                 </constraints>
                                                                 <connections>
-                                                                    <action selector="singlePageSliderChanged:" destination="OYh-f0-sq6" eventType="valueChanged" id="Ld3-ie-IP4"/>
+                                                                    <action selector="singlePageSliderChanged:" destination="OYh-f0-sq6" eventType="valueChanged" id="aHA-xg-Zuc"/>
                                                                 </connections>
                                                             </slider>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bf5-LS-Bal">
@@ -90,7 +90,7 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="extractPage:" destination="OYh-f0-sq6" eventType="touchUpInside" id="Fet-rQ-Dsf"/>
+                                                                    <action selector="extractPage:" destination="OYh-f0-sq6" eventType="touchUpInside" id="RAM-0j-5if"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -111,7 +111,7 @@
                                                                     <constraint firstAttribute="height" constant="30" id="lfd-pd-oPO"/>
                                                                 </constraints>
                                                                 <connections>
-                                                                    <action selector="rangePageSliderChanged:" destination="OYh-f0-sq6" eventType="valueChanged" id="Rog-Kd-dfQ"/>
+                                                                    <action selector="rangePageSliderChanged:" destination="OYh-f0-sq6" eventType="valueChanged" id="k8e-yR-7YR"/>
                                                                 </connections>
                                                             </view>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GqL-rS-2hT">
@@ -125,7 +125,7 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="newPDFFromRange:" destination="OYh-f0-sq6" eventType="touchUpInside" id="kni-IX-8iy"/>
+                                                                    <action selector="newPDFFromRange:" destination="OYh-f0-sq6" eventType="touchUpInside" id="zfK-oa-lQM"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -217,10 +217,10 @@
                         <outlet property="pagesLabel" destination="m0E-iy-MJg" id="sg7-V4-RnV"/>
                         <outlet property="pdfNameLabel" destination="Ti3-V6-Dxo" id="nD2-ec-5tf"/>
                         <outlet property="pdfView" destination="tb1-rt-ds9" id="KsE-tm-oQg"/>
-                        <outlet property="rangePageSlider" destination="f4h-Mk-zum" id="RjN-x8-YsC"/>
-                        <outlet property="rangePagesLabel" destination="N03-SI-9AO" id="x9t-pv-FEe"/>
-                        <outlet property="singlePageLabel" destination="1JD-d0-3IB" id="NZ3-vj-ihH"/>
-                        <outlet property="singlePageSlider" destination="8yJ-H7-g6r" id="WyZ-By-7Qn"/>
+                        <outlet property="rangePageSlider" destination="f4h-Mk-zum" id="aPO-hS-DbV"/>
+                        <outlet property="rangePagesLabel" destination="N03-SI-9AO" id="wYx-B1-BzV"/>
+                        <outlet property="singlePageLabel" destination="1JD-d0-3IB" id="hAC-CW-iYx"/>
+                        <outlet property="singlePageSlider" destination="8yJ-H7-g6r" id="r5J-R8-DL5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pXA-FH-Y7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -302,7 +302,7 @@
                         <viewLayoutGuide key="safeArea" id="ScC-Zx-BKk"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="zEw-yl-H2D">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="9cz-0e-Qja">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="9cz-0e-Qja">
                             <connections>
                                 <action selector="extractPages:" destination="NrX-xJ-hau" id="4M4-tr-IY4"/>
                             </connections>
