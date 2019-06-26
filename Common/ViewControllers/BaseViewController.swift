@@ -12,6 +12,10 @@ import PDFKit
 class BaseViewController: UIViewController {
     
     // MARK: - Outlets
+    @IBOutlet private weak var pdfView: PDFView!
+    @IBOutlet private weak var pdfNameLabel: UILabel!
+    @IBOutlet private weak var pagesLabel: UILabel!
+    
     @IBOutlet private weak var singlePageLabel: UILabel!
     @IBOutlet private weak var singlePageSlider: UISlider!
     @IBOutlet private weak var rangePagesLabel: UILabel!
@@ -23,6 +27,9 @@ class BaseViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.pdfView.layer.borderWidth = 1
+        self.pdfView.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     // MARK: - Actions
@@ -50,6 +57,12 @@ class BaseViewController: UIViewController {
         }
     }
     
+    @IBAction func extractPages(_ sender: UIButton) {
+        let extractPagesVC = UIStoryboard(name: "ExtractPages", bundle: nil).instantiateViewController(withIdentifier: "ExtractPagesViewController") as! ExtractPagesViewController
+        extractPagesVC.pdf = self.pdf
+        self.navigationController?.pushViewController(extractPagesVC, animated: true)
+    }
+    
     @IBAction func singlePageSliderChanged(_ sender: UISlider) {
         self.singlePageLabel.text = "Selected page: \(Int(sender.value))"
     }
@@ -61,6 +74,18 @@ class BaseViewController: UIViewController {
 
 // MARK: - Public Methods
 extension BaseViewController {
+    
+    func display(pdf: PDFDocument) {
+        
+        self.pdf = pdf
+        
+        self.pdfView.displayMode = .singlePage
+        self.pdfView.autoScales = true
+        self.pdfView.displayDirection = .vertical
+        self.pdfView.document = pdf
+        self.pdfNameLabel.text = PDFServices.getURLFileName(for: pdf)
+        self.pagesLabel.text = "\(pdf.pageCount) \(pdf.pageCount == 1 ? "page" : "pages")"
+    }
     
     func setupSliders() {
         

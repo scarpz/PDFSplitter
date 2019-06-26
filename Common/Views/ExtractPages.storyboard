@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Extract Pages-->
+        <scene sceneID="fOv-mx-4vY">
+            <objects>
+                <viewController storyboardIdentifier="ExtractPagesViewController" id="yEH-r7-q3p" customClass="ExtractPagesViewController" customModule="PDFSplitterExt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B57-Tm-vEN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kL4-3q-E3S">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6Ke-o8-BXf">
+                                    <size key="itemSize" width="119" height="170"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PageCell" id="epD-4B-GEl" customClass="PageCell" customModule="PDFSplitterExt" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="119" height="170"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="119" height="170"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJ4-9E-1x4" customClass="PDFView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="119" height="170"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uncheckbox" translatesAutoresizingMaskIntoConstraints="NO" id="nF4-71-Z50">
+                                                    <rect key="frame" x="89.5" y="0.0" width="29.5" height="30"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="nF4-71-Z50" secondAttribute="height" multiplier="1:1" id="m0L-xE-gZB"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylR-bo-Pk7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="119" height="170"/>
+                                                    <connections>
+                                                        <action selector="selectPage:" destination="epD-4B-GEl" eventType="touchUpInside" id="2Cj-NB-Vf5"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ylR-bo-Pk7" secondAttribute="trailing" id="4DL-na-Eix"/>
+                                            <constraint firstItem="ylR-bo-Pk7" firstAttribute="top" secondItem="epD-4B-GEl" secondAttribute="top" id="AfB-PT-SpI"/>
+                                            <constraint firstItem="nF4-71-Z50" firstAttribute="width" secondItem="epD-4B-GEl" secondAttribute="width" multiplier="0.25" id="KJ4-au-7R6"/>
+                                            <constraint firstItem="ylR-bo-Pk7" firstAttribute="leading" secondItem="epD-4B-GEl" secondAttribute="leading" id="Kwe-J7-awG"/>
+                                            <constraint firstItem="tJ4-9E-1x4" firstAttribute="top" secondItem="epD-4B-GEl" secondAttribute="top" id="MMz-Qk-BK5"/>
+                                            <constraint firstItem="nF4-71-Z50" firstAttribute="top" secondItem="epD-4B-GEl" secondAttribute="top" id="Mls-db-Ona"/>
+                                            <constraint firstAttribute="trailing" secondItem="tJ4-9E-1x4" secondAttribute="trailing" id="QGg-id-PiJ"/>
+                                            <constraint firstItem="tJ4-9E-1x4" firstAttribute="leading" secondItem="epD-4B-GEl" secondAttribute="leading" id="jxm-oR-7WP"/>
+                                            <constraint firstAttribute="trailing" secondItem="nF4-71-Z50" secondAttribute="trailing" id="rCw-p0-7UK"/>
+                                            <constraint firstAttribute="bottom" secondItem="tJ4-9E-1x4" secondAttribute="bottom" id="sfC-cz-Bl9"/>
+                                            <constraint firstAttribute="bottom" secondItem="ylR-bo-Pk7" secondAttribute="bottom" id="wpL-rz-sne"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="checkbox" destination="nF4-71-Z50" id="0xR-Us-41Q"/>
+                                            <outlet property="pdfView" destination="tJ4-9E-1x4" id="sL2-a6-J4e"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="G1P-W2-VEm" firstAttribute="trailing" secondItem="kL4-3q-E3S" secondAttribute="trailing" id="4yA-dd-g3q"/>
+                            <constraint firstAttribute="bottom" secondItem="kL4-3q-E3S" secondAttribute="bottom" id="Yar-yR-gxt"/>
+                            <constraint firstItem="kL4-3q-E3S" firstAttribute="leading" secondItem="G1P-W2-VEm" secondAttribute="leading" id="gN8-J0-YX2"/>
+                            <constraint firstItem="kL4-3q-E3S" firstAttribute="top" secondItem="G1P-W2-VEm" secondAttribute="top" id="hbw-9f-pco"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="G1P-W2-VEm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Extract Pages" id="eWW-rG-MD4">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="hS9-h7-4Ok">
+                            <connections>
+                                <action selector="extractPages:" destination="yEH-r7-q3p" id="jfk-We-cqg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="kL4-3q-E3S" id="nUl-xk-Up5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dk5-Od-paJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2936.8000000000002" y="78.325123152709367"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="uncheckbox" width="37.5" height="37.5"/>
+    </resources>
+</document>

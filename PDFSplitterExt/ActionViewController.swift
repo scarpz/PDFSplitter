@@ -11,12 +11,7 @@ import MobileCoreServices
 import PDFKit
 
 class ActionViewController: BaseViewController {
-    
-    // MARK: - Outlets
-    @IBOutlet private weak var pdfView: PDFView!
-    @IBOutlet private weak var pdfNameLabel: UILabel!
-    @IBOutlet private weak var pagesLabel: UILabel!
-
+ 
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +22,6 @@ class ActionViewController: BaseViewController {
     // MARK: - Actions
     @IBAction func done() {
         self.extensionContext!.completeRequest(returningItems: self.extensionContext!.inputItems, completionHandler: nil)
-    }
-    
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ExtractPagesSegue" {
-            let destination = segue.destination as! ExtractPagesViewController
-            destination.pdf = self.pdf
-        }
     }
 }
 
@@ -71,7 +58,6 @@ extension ActionViewController {
                 if let pdfURL = pdfURL as? URL {
                     guard let pdf = PDFDocument(url: pdfURL) else { return }
                     DispatchQueue.main.async {
-                        self.pdf = pdf
                         self.display(pdf: pdf)
                         self.setupSliders()
                     }
@@ -86,15 +72,6 @@ extension ActionViewController {
                 self.done()
             })
         }
-    }
-    
-    private func display(pdf: PDFDocument) {
-        self.pdfView.displayMode = .singlePage
-        self.pdfView.autoScales = true
-        self.pdfView.displayDirection = .vertical
-        self.pdfView.document = pdf
-        self.pdfNameLabel.text = PDFServices.getURLFileName(for: pdf)
-        self.pagesLabel.text = "\(pdf.pageCount) \(pdf.pageCount == 1 ? "page" : "pages")"
     }
 
 }
